@@ -1,0 +1,52 @@
+<%= form_with(model: experiencium) do |form| %>
+  <% if experiencium.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(experiencium.errors.count, "error") %> prohibited this experiencium from being saved:</h2>
+
+      <ul>
+        <% experiencium.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :empresa %>
+    <%= form.text_field :empresa %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cargo %>
+    <%= form.text_field :cargo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :descricao %>
+    <%= form.text_field :descricao %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dataInicio %>
+    <%= form.date_select :dataInicio %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dataFim %>
+    <%= form.date_select :dataFim %>
+  </div>
+
+  <div class="field">
+    <%= form.label :curriculo_id %>
+    <%= form.text_field :curriculo_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :aluno_id %>
+    <%= form.text_field :aluno_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

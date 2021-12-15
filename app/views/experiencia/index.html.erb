@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Experiencia</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Empresa</th>
+      <th>Cargo</th>
+      <th>Descricao</th>
+      <th>Datainicio</th>
+      <th>Datafim</th>
+      <th>Curriculo</th>
+      <th>Aluno</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @experiencia.each do |experiencium| %>
+      <tr>
+        <td><%= experiencium.empresa %></td>
+        <td><%= experiencium.cargo %></td>
+        <td><%= experiencium.descricao %></td>
+        <td><%= experiencium.dataInicio %></td>
+        <td><%= experiencium.dataFim %></td>
+        <td><%= experiencium.curriculo_id %></td>
+        <td><%= experiencium.aluno_id %></td>
+        <td><%= link_to 'Show', experiencium %></td>
+        <td><%= link_to 'Edit', edit_experiencium_path(experiencium) %></td>
+        <td><%= link_to 'Destroy', experiencium, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Experiencium', new_experiencium_path %>

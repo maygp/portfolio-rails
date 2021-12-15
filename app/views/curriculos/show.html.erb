@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Idiomas:</strong>
+  <%= @curriculo.idiomas %>
+</p>
+
+<p>
+  <strong>Formacao:</strong>
+  <%= @curriculo.formacao %>
+</p>
+
+<p>
+  <strong>Conhecimentos:</strong>
+  <%= @curriculo.conhecimentos %>
+</p>
+
+<p>
+  <strong>Outros:</strong>
+  <%= @curriculo.outros %>
+</p>
+
+<p>
+  <strong>Aluno:</strong>
+  <%= @curriculo.aluno_id %>
+</p>
+
+<%= link_to 'Edit', edit_curriculo_path(@curriculo) %> |
+<%= link_to 'Back', curriculos_path %>

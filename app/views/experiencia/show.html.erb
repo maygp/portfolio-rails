@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Empresa:</strong>
+  <%= @experiencium.empresa %>
+</p>
+
+<p>
+  <strong>Cargo:</strong>
+  <%= @experiencium.cargo %>
+</p>
+
+<p>
+  <strong>Descricao:</strong>
+  <%= @experiencium.descricao %>
+</p>
+
+<p>
+  <strong>Datainicio:</strong>
+  <%= @experiencium.dataInicio %>
+</p>
+
+<p>
+  <strong>Datafim:</strong>
+  <%= @experiencium.dataFim %>
+</p>
+
+<p>
+  <strong>Curriculo:</strong>
+  <%= @experiencium.curriculo_id %>
+</p>
+
+<p>
+  <strong>Aluno:</strong>
+  <%= @experiencium.aluno_id %>
+</p>
+
+<%= link_to 'Edit', edit_experiencium_path(@experiencium) %> |
+<%= link_to 'Back', experiencia_path %>

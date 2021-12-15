@@ -1,0 +1,42 @@
+<%= form_with(model: curriculo) do |form| %>
+  <% if curriculo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(curriculo.errors.count, "error") %> prohibited this curriculo from being saved:</h2>
+
+      <ul>
+        <% curriculo.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :idiomas %>
+    <%= form.text_field :idiomas %>
+  </div>
+
+  <div class="field">
+    <%= form.label :formacao %>
+    <%= form.text_field :formacao %>
+  </div>
+
+  <div class="field">
+    <%= form.label :conhecimentos %>
+    <%= form.text_field :conhecimentos %>
+  </div>
+
+  <div class="field">
+    <%= form.label :outros %>
+    <%= form.text_field :outros %>
+  </div>
+
+  <div class="field">
+    <%= form.label :aluno_id %>
+    <%= form.text_field :aluno_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
